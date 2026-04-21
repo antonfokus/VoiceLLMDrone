@@ -18,6 +18,11 @@ git clone https://github.com/antonfokus/VoiceLLMDrone.git
 cd VoiceLLMDrone
 bash setup.sh
   ```
+4.  Собрать проект
+```bash
+colcon build
+source install/setup.bash
+  ```
    
 ## Использование
 1. Запустить PX4
