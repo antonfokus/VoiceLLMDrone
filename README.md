@@ -1,11 +1,31 @@
 Выпускная квалификационная работа
+
 Студента группы КТмо2-14 Щерба А.С.
 
-Инструкция
-Установка
-0. Должны быть установлены PX4 SITL/Gazebo
-1. Клонировать этот репозиторий
+## Инструкция
+Данная инструкция подразумевает использвание Linux Ubuntu и PX4 SITL/Gazebo
+
+## Установка
+1. Должны быть установлены PX4 SITL/Gazebo. Для установки можно использовать <a href="https://docs.px4.io/main/en/dev_setup/dev_env.html">документацию PX4</a>. Также необходимо установить QGroundControl.
+2. Клонировать этот репозиторий
+```
+git clone https://github.com/antonfokus/VoiceLLMDrone.git
+```
 2. Запустить setup.sh для загрузки библиотек и модели DroneLlama
-Использование
+```bash
+cd VoiceLLMDrone
+bash setup.sh
+  ```
+   
+## Использование
 1. Запустить PX4
-2. Запустить приложение
+```bash
+cd PX4-Autopilot
+make px4_sitl gz_x500
+  ```
+2. Запустить приложение в другом терминале
+```
+cd VoiceLLMDrone
+python main.py # для тектового управления
+python main_voice.py # для голосового управления
+  ```
