@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing packages..."
-pip install pymavlink huggingface_hub mavsdk llama-cpp-python
+pip install pymavlink huggingface_hub mavsdk llama-cpp-python sounddevice vosk
 echo "Packages installed."
 
 echo "Downloading model ..."
